@@ -1,0 +1,424 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Steel & Magic — nawigacja</title><style>
+:root{color-scheme:dark;--bg:#0d1522;--panel:#1c2b40;--panel2:#263850;--gold:#d9bb7e;--text:#e9edf5;--muted:#aab7ca}*{box-sizing:border-box}html,body{width:100%;height:100%;overflow:hidden}body{margin:0;background:var(--bg);font:14px system-ui,-apple-system,Arial;color:var(--text)}button,input{font:inherit}button{cursor:pointer}.app{max-width:560px;margin:auto;height:100vh;height:100dvh;min-height:0;display:flex;flex-direction:column;background:linear-gradient(165deg,#15233a,#0d1522 55%);overflow:hidden}.top{padding:calc(12px + env(safe-area-inset-top)) 16px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #354359;flex-shrink:0}.brand{font-size:16px;font-weight:850;color:var(--gold);letter-spacing:.06em}.tiny{font-size:11px;color:var(--muted)}.avatar{border:1px solid #9a835d;border-radius:50%;background:#293d54;color:var(--gold);width:39px;height:39px}.content{flex:1 1 0;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding:16px 16px 26px}.content.play-fixed{overflow:hidden;padding:clamp(5px,1.5dvh,14px) 12px 5px}.content.play-fixed #play{height:100%;min-height:0;display:flex;flex-direction:column;gap:clamp(4px,1dvh,10px)}.content.play-fixed #play:not(.active){display:none}.content.play-fixed #play h1{font-size:clamp(15px,2.6dvh,22px);margin:0}.content.play-fixed #play h2{font-size:clamp(12px,2dvh,15px);margin:0 0 4px}.content.play-fixed #play .card{margin:0;padding:clamp(7px,1.4dvh,12px)}.content.play-fixed #play .progress{margin:clamp(4px,1dvh,10px) 0;height:7px}.content.play-fixed #play .btn{padding:clamp(5px,1dvh,10px)}.content.play-fixed #play .unit{aspect-ratio:auto;height:clamp(36px,8dvh,75px);min-width:0}.content.play-fixed #play .unit span{font-size:clamp(13px,2.8dvh,19px)}.content.play-fixed #play .unit small{font-size:8px;overflow:hidden;text-overflow:ellipsis;max-width:100%}.content.play-fixed #play .tile{padding:clamp(5px,1dvh,10px) 4px;font-size:clamp(10px,1.7dvh,13px)}.content.play-fixed #play .tile b{margin-top:3px}.content.play-fixed #play .grid2{gap:5px}.content.play-fixed #play .play-grow{flex:1 1 0;min-height:0;display:flex;flex-direction:column;justify-content:flex-end}.content.play-fixed #play .play-grow .grid2{flex:0 1 auto}.content.play-fixed #play .play-grow h2{margin:0 0 5px}.content.play-fixed #play .play-note{font-size:10px;margin:0;text-align:center}.content.play-fixed #play .play-cta{font-size:clamp(15px,2.5dvh,19px)!important;padding:clamp(8px,1.5dvh,17px)!important;flex-shrink:0}.view{display:none}.view.active{display:block}.nav{flex:0 0 auto;position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);background:#17253a;border-top:1px solid #41516a;padding:7px 5px calc(8px + env(safe-area-inset-bottom))}.nav button{border:0;background:transparent;color:#aab7ca;display:flex;align-items:center;gap:4px;flex-direction:column;padding:7px 2px;border-radius:10px;font-weight:700;font-size:10px}.nav button.active{background:#2a3c54;color:var(--gold)}.ico{font-size:23px}h1{font-size:22px;color:var(--gold);margin:3px 0 14px}h2{font-size:15px;margin:0 0 11px;color:#f0dfbd}.card{border:1px solid #43536c;background:var(--panel);border-radius:14px;padding:14px;margin-bottom:12px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.muted{color:var(--muted)}.btn{border:1px solid #927a4f;border-radius:10px;background:#b89b63;color:#101b2b;padding:11px 13px;font-weight:800}.btn.secondary{background:#2b4058;color:#e8d3a8;border-color:#60718b}.btn:disabled{opacity:.45}.full{width:100%}.chips{display:flex;gap:7px;overflow-x:auto;padding:2px 0 11px}.chip{border:1px solid #4b5c72;background:#273951;border-radius:9px;color:#d6e1ee;padding:9px 12px;white-space:nowrap}.chip.active{background:#9e8556;color:#101927}.deckcards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}.unit{aspect-ratio:3/4;border-radius:7px;border:1px solid #7c6c52;background:linear-gradient(#45516a,#202b3c);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:3px;color:#f1e4c9}.unit span{font-size:19px}.unit small{font-size:9px}.progress{height:9px;background:#3b4a60;border-radius:20px;overflow:hidden;margin:12px 0}.progress>div{height:100%;background:var(--gold);width:56%}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.tile{padding:14px 9px;text-align:center;border:1px solid #4a5b73;background:#25364d;border-radius:12px;color:var(--text)}.tile b{display:block;color:var(--gold);margin-top:6px}.entry{padding:11px 0;border-bottom:1px solid #3d4d64}.entry:last-child{border:0}.modalback{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modalback.show{display:flex}.modal{background:#1d2c42;border:1px solid #947b53;border-radius:16px;width:min(420px,100%);max-height:85dvh;overflow:auto;padding:18px}.modal h2{color:var(--gold);font-size:19px}.chat{height:min(410px,55dvh);display:flex;flex-direction:column}.messages{flex:1;overflow:auto;background:#111d2e;border-radius:10px;padding:10px}.bubble{background:#263c54;padding:8px 10px;border-radius:9px;margin:7px 0;max-width:95%}.compose{display:flex;gap:6px;padding-top:8px}.compose input{min-width:0;flex:1;background:#101d2c;border:1px solid #51647d;border-radius:9px;color:white;padding:10px}.compose button{padding:9px}.notice{font-size:11px;color:#b5c3d4;margin:12px 0}.screenbattle{display:none;position:fixed;inset:0;background:linear-gradient(180deg,#273b4c,#132338);z-index:20;align-items:center;justify-content:center;padding:22px;text-align:center}.screenbattle.show{display:flex}.battlepanel{width:min(420px,100%)}.arena{height:45dvh;border:3px solid #827457;border-radius:14px;background:repeating-linear-gradient(0deg,#304a42,#304a42 40px,#385346 41px,#385346 80px);display:flex;align-items:center;justify-content:center;font-size:45px;margin:20px 0}.hide{display:none!important}
+\n#playdeck{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:5px!important;align-items:stretch!important}\n#playdeck .unit{width:100%!important;min-width:0!important;aspect-ratio:3/4!important;padding:0!important;overflow:hidden!important;border:3px solid #d5b26b!important;border-radius:9px!important;box-sizing:border-box!important}\n#playdeck .unit .sm-art{display:block!important;width:100%!important;height:100%!important;margin:0!important;border-radius:0!important;overflow:hidden!important}\n#playdeck .unit .sm-art img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}\n#playdeck .sm-deck-empty{display:grid!important;place-items:center!important;background:#17283b!important;border:2px dashed #ad8b50!important;color:#c6a56c!important;font-size:22px!important}\n#playdeck .sm-deck-card>span{font-size:22px!important}\n
+/* TEST 17.6: six-slot deck and four-column portrait collection */
+#deckcards{grid-template-columns:repeat(6,minmax(0,1fr));gap:5px}
+#deckcards .unit{min-width:0;width:100%;aspect-ratio:3/4;padding:0;overflow:hidden;border:1px solid #d5b26b;border-radius:9px;box-sizing:border-box}
+#deckcards .unit .sm-art{display:block!important;width:100%!important;height:100%!important;margin:0!important;border-radius:0!important;overflow:hidden!important}
+#deckcards .unit .sm-art img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}
+#deckcards .sm-deck-empty{display:grid;place-items:center;background:#17283b;border:3px dashed #d5b26b;color:#d5b26b;font-size:22px}
+.sm-deck-top{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;flex-wrap:nowrap!important}.sm-deck-top h2{margin:0!important;white-space:nowrap!important}.sm-deck-top #deckchips{display:flex!important;gap:4px!important;flex-wrap:nowrap!important;margin:0!important}.sm-deck-top #deckchips .chip{min-width:0!important;padding:7px 10px!important}.sm-deck-copy{display:inline-block!important;margin-top:12px!important;width:auto!important;max-width:100%!important;align-self:flex-start!important}\n.sm-collection-heading{text-align:center!important;font-size:23px!important;font-weight:900!important;letter-spacing:.025em!important;margin:18px 0 14px!important;padding:0 0 12px!important;border-bottom:5px solid #d9bb7e!important}\n.sm-locked-heading{margin-top:25px!important}\n#collection{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important}
+
+
+
+
+#collection button.tile{position:relative!important;border:0!important}
+#collection button.tile[aria-pressed="true"]{box-shadow:none!important}
+
+#collection button.tile{min-width:0!important;padding:0!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;gap:0!important;border-radius:10px!important}
+#collection button.tile .sm-collection-portrait{display:block!important;width:100%!important;aspect-ratio:3/4!important;min-height:0!important;overflow:hidden!important;font-size:30px!important}
+#collection button.tile .sm-collection-portrait.sm-art{height:auto!important;margin:0!important;border-radius:0!important}
+#collection button.tile .sm-collection-portrait img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}
+#collection button.tile .sm-collection-caption{width:100%;min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:3px;padding:4px 5px;color:var(--gold)}
+#collection button.tile .sm-collection-caption b{font-size:clamp(9px,2.5vw,12px)!important;line-height:1.15!important;margin:0!important;min-width:0}
+#collection button.tile .sm-collection-caption b:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left}
+#collection button.tile .sm-collection-caption b:last-child{flex-shrink:0;white-space:nowrap}
+.sm-detail-tabs{display:flex;gap:5px;margin-bottom:12px}.sm-detail-tabs .chip{flex:1;min-width:0;padding:8px 3px;font-size:12px}.sm-detail-art{height:170px;display:grid;place-items:center;font-size:74px;background:#192b41;border:2px solid var(--gold);border-radius:10px}.sm-detail-stats>div{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #ffffff25}\n
+/* TEST 17.6 — unit detail based on approved Miecznik v0.8 layout */
+#modal.sm-unit-dialog{width:min(520px,96vw);max-height:80dvh;padding:10px;border-color:#a88b5b;background:#172334}
+#modal.sm-unit-dialog #modaltitle{font-family:Georgia,serif;color:#f1d69b;margin:2px 0 9px;font-size:21px}
+.sm-unit-dialog .sm-detail-tabs{display:flex;gap:4px;margin:0 0 8px}
+.sm-unit-dialog .sm-detail-tabs .chip{flex:1;min-width:0;padding:8px 3px;font-size:11px;border-radius:6px}
+.sm-detail-layout{display:grid;grid-template-columns:42% minmax(0,58%);min-height:290px;border:1px solid #53657b;border-radius:9px;overflow:hidden;background:#1b2a3b}
+.sm-detail-left{display:flex;flex-direction:column;min-width:0;background:#101925}
+.sm-detail-left .sm-detail-art{width:100%;aspect-ratio:594/840;min-height:0;overflow:hidden;border:3px solid #b7c8d9;border-radius:7px;background:#101925;box-shadow:inset 0 0 0 1px #52677d}
+.sm-detail-left .sm-detail-art img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important}
+.sm-detail-left .sm-detail-action{padding:8px 5px;font-size:11px;margin:6px}
+.sm-detail-right{min-width:0;padding:10px;overflow:auto;max-height:55dvh}
+.sm-detail-right .sm-detail-heading{font-family:Georgia,serif;font-size:16px;color:#f1d69b;margin:0 0 8px}
+.sm-detail-right .sm-detail-meta{font-size:11px;color:#b9c4d3;margin:0 0 10px}
+.sm-detail-right .sm-detail-upgrade{border:1px solid #647187;border-radius:8px;padding:9px;margin-top:12px;background:#243349}
+.sm-detail-right .sm-detail-upgrade strong{color:#f1d69b}
+.sm-detail-right .sm-detail-stats{display:grid;gap:4px}
+.sm-detail-right .sm-detail-stats>div{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #45546a;padding:5px 0;font-size:11px}
+.sm-detail-right .sm-detail-stats b{color:#e8d3a8;text-align:right}
+.sm-detail-right .sm-detail-info{font-size:11px;color:#b9c4d3;line-height:1.5}
+.sm-unit-dialog .sm-detail-left .sm-detail-art img{object-fit:contain!important;object-position:center center!important;max-width:100%!important;max-height:100%!important}
+/* Fantasy rarity frame — portrait only, never collection thumbnails */
+.sm-unit-dialog{--sm-rarity:#9299a4;--sm-rarity-light:#d1d5dc;--sm-rarity-dark:#424b5a}
+.sm-unit-dialog.sm-detail-common{--sm-rarity:#9299a4;--sm-rarity-light:#dce0e7;--sm-rarity-dark:#434b56}
+.sm-unit-dialog.sm-detail-magic{--sm-rarity:#398bde;--sm-rarity-light:#a8d8ff;--sm-rarity-dark:#164274}
+.sm-unit-dialog.sm-detail-epic{--sm-rarity:#a66ae4;--sm-rarity-light:#e4c5ff;--sm-rarity-dark:#55247e}
+.sm-unit-dialog.sm-detail-legendary{--sm-rarity:#e3b44d;--sm-rarity-light:#fff1ae;--sm-rarity-dark:#86561a}
+.sm-unit-dialog .sm-detail-left .sm-detail-art{position:relative;isolation:isolate;border:5px ridge var(--sm-rarity)!important;border-radius:11px!important;box-shadow:0 0 0 2px var(--sm-rarity-dark),inset 0 0 0 2px var(--sm-rarity-light),0 0 16px -6px var(--sm-rarity)!important;background:linear-gradient(150deg,#172436,#0a101a)!important}
+.sm-unit-dialog .sm-detail-left .sm-detail-art:after{content:"";position:absolute;inset:5px;pointer-events:none;border:1px solid var(--sm-rarity-light);border-radius:4px;opacity:.75;box-shadow:inset 0 0 12px var(--sm-rarity-dark)}
+.sm-unit-dialog .sm-detail-left .sm-detail-art:before{content:"✦";position:absolute;z-index:3;top:0;left:50%;transform:translate(-50%,-44%);font:900 13px Georgia,serif;color:var(--sm-rarity-light);text-shadow:0 1px 3px #000;pointer-events:none}
+.sm-unit-dialog .sm-detail-meta .sm-rarity-label{color:var(--sm-rarity-light);font-weight:800}
+@media(max-width:380px){.sm-detail-right{padding:7px}.sm-unit-dialog .sm-detail-tabs .chip{font-size:10px}}
+
+/* TEST 17.6: replace one of the two same-cost deck cards inside unit details */
+.sm-unit-dialog .sm-swap-label{text-align:center;font-size:10px;color:#e8d3a8;padding:5px 2px 3px}
+.sm-unit-dialog .sm-swap-options{display:flex;justify-content:center;gap:6px;padding:0 6px 3px}
+.sm-unit-dialog .sm-swap-card{position:relative;width:calc((100% - 6px)/2);max-width:65px;aspect-ratio:3/4;padding:0;overflow:hidden;border:2px solid #d5b26b;border-radius:9px}
+.sm-unit-dialog .sm-swap-card .sm-art{width:100%;height:100%;display:block;overflow:hidden}
+.sm-unit-dialog .sm-swap-card .sm-art img{width:100%;height:100%;object-fit:cover}
+
+/* TEST 17.6: restore four collection section divider lines */
+#deck .sm-collection-heading{border:0!important;text-align:center!important;display:block!important;width:100%!important;position:relative!important;background:linear-gradient(180deg,transparent 0%,rgba(158,176,194,.07) 50%,transparent 100%)!important;padding:15px 0!important;margin:17px 0 13px!important;color:#e6d3aa!important;text-shadow:0 1px 1px #050a12,0 0 8px rgba(216,187,126,.22)!important;box-shadow:inset 0 1px 0 rgba(239,246,255,.65),inset 0 2px 0 #8192a6,inset 0 3px 0 #303e51,inset 0 -1px 0 rgba(239,246,255,.65),inset 0 -2px 0 #8192a6,inset 0 -3px 0 #303e51!important}
+#deck .sm-locked-heading{margin-top:22px!important}
+
+/* TEST 17.6 — portrait fantasy shop; keeps existing top account header and bottom navigation */
+#shop>h1{text-align:center;font-family:Georgia,serif;font-size:28px;letter-spacing:.09em;text-shadow:0 2px 7px #000;color:#f2d79b;margin:4px 0 12px}
+#shopchips{justify-content:center;gap:5px;scrollbar-width:none}
+#shopchips .chip{font-size:11px;padding:8px 10px;flex-shrink:0}
+.sm-shop-section{text-align:center;font:700 17px Georgia,serif;color:#f2d79b;margin:18px 0 10px;padding:9px 0;border-top:2px ridge #8b9aa9;border-bottom:2px ridge #8b9aa9}
+.sm-shop-lottery,.sm-shop-tile,.sm-shop-promo{background:linear-gradient(155deg,#26374d,#101a2b 70%);border:2px ridge #b49457;box-shadow:inset 0 0 0 1px #4b5970,0 3px 10px #0006;border-radius:11px}
+.sm-shop-lottery{padding:13px 11px;display:grid;grid-template-columns:minmax(0,1fr) 90px;gap:6px;align-items:center}
+.sm-shop-lottery strong{font:700 19px Georgia,serif;color:#f6d991}.sm-shop-lottery p{font-size:12px;line-height:1.35;margin:7px 0}.sm-shop-lottery small{font-size:10px;color:#bbc9db}
+.sm-shop-lottery .btn{grid-column:1/-1;width:100%;font-size:12px}
+.sm-shop-wheel{width:88px;height:88px;border:5px ridge #d4ab61;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#d9bdfc;background:radial-gradient(circle,#a563dd 0%,#532878 42%,#23163e 70%);box-shadow:0 0 20px #8d3bb66b;font-size:15px}.sm-shop-wheel span{font:700 38px Georgia,serif;color:#fff1b9}
+.sm-shop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.sm-shop-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.sm-shop-tile{padding:9px 5px;display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.sm-shop-tile-title{font:700 clamp(10px,2.8vw,13px) Georgia,serif;color:#f4d894;white-space:nowrap}
+.sm-shop-illustration{font-size:clamp(34px,11vw,58px);display:grid;place-items:center;min-height:88px;filter:drop-shadow(0 4px 7px #000)}
+.sm-shop-tile.crystal .sm-shop-illustration{filter:drop-shadow(0 0 10px #3fa7ff)}.sm-shop-tile.gold .sm-shop-illustration{filter:drop-shadow(0 0 10px #bd7b29)}
+.sm-shop-desc{font-size:10px;line-height:1.35;flex:1;color:#d5deeb;margin-bottom:10px}
+.sm-shop-buy{font-size:10px;padding:8px 3px;width:100%;min-height:33px}
+.sm-shop-promo{margin-top:12px;padding:11px;display:grid;grid-template-columns:1fr auto;gap:7px;align-items:center}
+.sm-shop-promo strong{font:700 16px Georgia,serif;color:#f2d79b}.sm-shop-promo span{grid-column:1/-1;color:#c6d1e1;font-size:11px}.sm-shop-promo .btn{grid-column:2;grid-row:1;font-size:10px;padding:7px 9px}
+.sm-shop-footnote{color:#bbc9db;text-align:center;font-size:11px;margin:10px 0}
+
+/* TEST 17.6: prize reel and seasonal login calendar */
+.sm-shop-lottery{display:block!important;text-align:center;padding:13px 10px!important}
+.sm-lottery-heading{font:700 21px Georgia,serif;color:#efd18d;text-shadow:0 2px 5px #000}
+.sm-lottery-desc{font-size:11px;color:#cbd6e5;margin:5px 0 11px}
+.sm-wheel-window{height:102px;position:relative;overflow:hidden;border:2px ridge #a99d7f;border-radius:9px;background:linear-gradient(180deg,#101929,#263450 50%,#0b1525)}
+.sm-wheel-strip{display:flex;align-items:center;gap:8px;height:100%;width:max-content;padding:0;will-change:transform}
+.sm-reward-tile{width:74px;height:82px;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #68748a;border-radius:8px;background:linear-gradient(#384960,#152238);box-shadow:inset 0 0 10px #0006}
+.sm-reward-tile span{font-size:32px}.sm-reward-tile small{font-size:9px;color:#e8d4ad}
+.sm-wheel-target{position:absolute;left:50%;top:4px;bottom:4px;width:78px;transform:translateX(-50%);border:3px solid #ffdd82;border-radius:9px;box-shadow:0 0 13px #f4bf55,inset 0 0 12px #e9b64b77;pointer-events:none}
+.sm-wheel-status{min-height:34px;font-size:11px;color:#e9d7b0;padding:9px 0 4px}
+.sm-wheel-disclaimer{display:block;color:#9cacc0;font-size:9px;margin-top:7px}
+.sm-season-header{text-align:center;border:2px ridge #aa8d59;background:#1c2b40;border-radius:10px;padding:12px 6px}
+.sm-season-header strong{font:700 19px Georgia,serif;color:#eed39d}.sm-season-header p{font-size:11px;color:#b9c8d9}
+.sm-season-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}
+.sm-season-day{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:65px;background:linear-gradient(#293a52,#142238);border:1px solid #68778b;border-radius:7px}
+.sm-season-day.today{border:2px solid #f2c568;box-shadow:0 0 9px #c69d4877}
+.sm-season-day small{font-size:9px;color:#e2c995}.sm-season-day span{font-size:24px;margin-top:4px}
+
+/* Fantasy shop: dedicated scalable chest illustrations */
+#shop .sm-chest-art{width:100%;height:100%;max-height:110px;object-fit:contain;display:block;filter:drop-shadow(0 5px 9px #0009)}
+#shop .sm-shop-tile:has(.sm-chest-art){background:radial-gradient(ellipse at 50% 31%,rgba(192,142,67,.18),transparent 70%),linear-gradient(160deg,#25364b,#0b1424 83%);border-color:#ac905d}
+#shop .sm-shop-tile.silver:has(.sm-chest-art){background:radial-gradient(ellipse at 50% 31%,rgba(91,163,234,.21),transparent 70%),linear-gradient(160deg,#25364b,#0b1424 83%)}
+#shop .sm-shop-tile.gold:has(.sm-chest-art){background:radial-gradient(ellipse at 50% 31%,rgba(205,142,252,.2),transparent 70%),linear-gradient(160deg,#25364b,#0b1424 83%)}
+#shop .sm-shop-illustration:has(.sm-chest-art){height:105px;min-height:105px;width:100%;font-size:initial}
+#shop .sm-shop-tile{transition:border-color .2s,transform .2s}
+#shop .sm-shop-tile:focus-within{border-color:#f3d698}
+@media(max-width:380px){#shop .sm-shop-illustration:has(.sm-chest-art){height:80px;min-height:80px}#shop .sm-shop-grid{gap:5px}#shop .sm-shop-tile{padding:7px 3px}}
+</style><style id="sm-loading-v176">#sm-loading{position:fixed;inset:0;z-index:99999;background:#10151e}#sm-loading img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}#sm-loading .sm-build{position:absolute;right:12px;top:calc(12px + env(safe-area-inset-top));padding:5px 9px;border-radius:7px;background:#10151ecc;color:#fff;font:600 11px system-ui}#sm-loading .sm-footer{position:absolute;bottom:calc(36px + env(safe-area-inset-bottom));left:8%;width:84%;color:white;text-align:center;text-shadow:0 1px 4px #000;font:600 13px system-ui}#sm-loading .sm-track{height:9px;border:1px solid #caa66d;border-radius:9px;background:#111b2bbd;overflow:hidden;margin-top:10px}#sm-loading .sm-fill{height:100%;width:0;background:#d9bb7e;transition:width .2s}#sm-loading[hidden]{display:none}</style><script>(function(){if(new URLSearchParams(location.search).get('nativeSplash')==='1')return;var names=['Ludzie','Mrok','Bestie'],name=names[Math.floor(Math.random()*3)],overlay=document.createElement('div');overlay.id='sm-loading';var img=document.createElement('img');img.alt='Steel & Magic — '+name;var label=document.createElement('div');label.className='sm-build';label.textContent='TEST 2026.10.17.6';var footer=document.createElement('div');footer.className='sm-footer';footer.innerHTML='<span>Sprawdzanie aktualizacji gry...</span><div class="sm-track"><div class="sm-fill"></div></div>';overlay.append(img,label,footer);var imageReady=false,started=Date.now(),closed=false;img.onload=function(){imageReady=true};img.onerror=function(){imageReady=true;img.remove()};img.src='/game/loading/Loading_'+name+'_9x20_1080x2400.webp';function tick(){if(closed)return;var active=document.querySelector('.view.active'),ready=!!(active&&document.querySelector('#playdeck'));var pct=!imageReady?15:ready?100:65;footer.querySelector('.sm-fill').style.width=pct+'%';footer.querySelector('span').textContent=ready?'Gra gotowa':imageReady?'Uruchamianie menu...':'Pobieranie grafiki...';if(ready&&imageReady&&Date.now()-started>=900){closed=true;overlay.hidden=true;return}if(Date.now()-started>12000){closed=true;overlay.hidden=true;console.warn('Steel & Magic: splash timeout');return}setTimeout(tick,120)}document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(overlay);tick()})})();</script></head><body><div class="app"><header class="top"><div><div class="brand">⚔ STEEL & MAGIC</div><div class="tiny">Menu Steel & Magic • podgląd integracji</div></div><button class="avatar" onclick="profile()">♙</button></header><main class="content" id="content">
+<section id="shop" class="view"><h1>Sklep</h1><div class="chips" id="shopchips"></div><div id="shopbody"></div></section>
+<section id="deck" class="view"><h1>Deck</h1><div class="card"><div class="row sm-deck-top"><h2>Aktywna talia</h2><div class="chips" id="deckchips"></div></div><div class="deckcards" id="deckcards"></div><button class="btn secondary sm-deck-copy" onclick="deckBackup()">Kopiuj deck</button></div><h2 class="sm-collection-heading">Kolekcja</h2><div id="collection" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px"></div><h2 class="sm-collection-heading sm-locked-heading">Zablokowane</h2><div id="locked-collection"></div></section>
+<section id="play" class="view"><h1>Graj</h1><div class="card"><div class="row"><h2>Dywizja IV</h2><button class="btn secondary" onclick="ranking()">🏆 Ranking</button></div><div class="muted">Punkty rankingowe: <b style="color:var(--gold)">1 240</b></div><div class="progress"><div></div></div><div class="tiny">Postęp do kolejnej dywizji (przykład)</div></div><div class="card"><div class="row"><h2>Aktywny deck</h2><button class="btn secondary" onclick="switchTab('deck')">Edytuj →</button></div><div class="deckcards" id="playdeck"></div></div><button class="btn full play-cta" onclick="battle(false)">⚔ GRAJ — TRENING Z AI</button><div class="play-grow"><h2>Pozostałe tryby</h2><div class="grid2"><button class="tile" onclick="friendBattle()">🤝<b>Gra ze znajomym</b></button><button class="tile" onclick="battle(false)">🤖<b>Trening z AI</b></button><button class="tile" onclick="info('Wydarzenia','Wydarzenia zostaną udostępnione w kolejnych aktualizacjach.')">📅<b>Wydarzenia</b></button></div></div></section>
+<section id="guild" class="view"><h1>Gildia</h1><div class="card"><div class="row"><div><h2>⚜ Żelazna Straż</h2><div class="tiny">[ZST] • 18/30 członków</div></div><button class="btn secondary" onclick="info('Herb gildii','Edytor herbu to osobny mechanizm.')">Herb</button></div></div><div class="chips" id="guildchips"></div><div id="guildbody"></div></section>
+</main><nav class="nav" aria-label="Główne zakładki"><button data-tab="shop" onclick="switchTab('shop')"><span class="ico">🛒</span>SKLEP</button><button data-tab="deck" onclick="switchTab('deck')"><span class="ico">🃏</span>DECK</button><button data-tab="play" onclick="switchTab('play')"><span class="ico">⚔️</span>GRAJ</button><button data-tab="guild" onclick="switchTab('guild')"><span class="ico">🛡️</span>GILDIA</button></nav></div>
+<div class="modalback" id="modal" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="row"><h2 id="modaltitle"></h2><button class="btn secondary" onclick="closeModal()">✕</button></div><div id="modalbody"></div></div></div>
+<div class="screenbattle" id="battle"><div class="battlepanel"><h1 id="battletitle">Plansza walki</h1><div id="battleview"><div class="arena">🏰 ⚔️ 🏰</div><p>Oddzielny ekran walki — tutaj docelowo podłączymy silnik bitwy.</p><button class="btn full" onclick="finishBattle()">Zakończ symulację bitwy</button></div><div id="battleend" class="hide"><div class="card"><h2>Podsumowanie bitwy</h2><p>Wynik i nagrody — dane przykładowe</p></div><button class="btn full" onclick="backToMenu()">POWRÓT DO MENU</button></div></div></div>
+<script>
+const $=id=>document.getElementById(id);
+const names=['Rycerz','Łucznik','Mag','Golem','Zabójca','Saper','Troll','Ent','Oszczepnik Mroku','Niedźwiedź','Ogr','Strażnik'];
+const icons=['🛡️','🏹','🔮','🪨','🗡️','💣','👹','🌳','🌑','🐻','👊','⚔️'];
+let current='play',activeDeck=0,shopSub='Oferty',guildSub='Członkowie';
+const decksets=[[0,1,2,3,4,5],[0,2,4,6,7,8],[1,3,5,9,10,11],[0,3,6,8,9,10],[1,2,5,7,8,11]];
+const scrolls={shop:0,deck:0,play:0,guild:0};
+function switchTab(tab){if(!['shop','deck','play','guild'].includes(tab))return;closeModal();scrolls[current]=$('content').scrollTop;current=tab;$('content').classList.toggle('play-fixed',tab==='play');document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id===tab));document.querySelectorAll('.nav button').forEach(x=>{x.classList.toggle('active',x.dataset.tab===tab);x.setAttribute('aria-current',x.dataset.tab===tab?'page':'false')});$('content').scrollTop=scrolls[tab]||0;if(tab==='play')renderPlay();}
+function modal(title,body){$('modal').classList.remove('sm-unit-dialog');$('modaltitle').textContent=title;$('modalbody').innerHTML=body;$('modal').classList.add('show')}
+function closeModal(){$('modal').classList.remove('show');$('modal').classList.remove('sm-unit-dialog')}
+function info(title,body){modal(title,'<p>'+body+'</p><button class="btn full" onclick="closeModal()">Zamknij</button>')}
+function profile(){modal('Profil gracza','<p>♙ <b>Twój bohater</b></p><p>Dywizja IV • 1 240 pkt</p><div class="grid2"><div class="card">Wygrane rankingowe<br><b>128</b></div><div class="card">Najwyższe punkty<br><b>1 480</b></div></div><p>Skuteczność w bieżącym sezonie: <b>58%</b></p><p class="tiny">Dane demonstracyjne.</p>')}
+function cards(ids){return ids.map(i=>`<button class="unit" onclick="unit(${i})"><span>${icons[i]}</span><small>${names[i]}</small></button>`).join('')}
+function unit(i){modal(names[i],`<div style="text-align:center;font-size:56px">${icons[i]}</div><div class="chips"><span class="chip active">Postać</span><span class="chip">Statystyki</span><span class="chip">Umiejętności</span></div><p>Podgląd karty — szczegółowe statystyki i rozwój podłączymy do zatwierdzonych danych jednostek.</p><button class="btn full" onclick="closeModal()">Zamknij</button>`)}
+const engineUnits=[["sword","Miecznik","🛡️"],["pik","Pikinier","🔱"],["archer","Łucznik","🏹"],["sapper","Saper","💣"],["bannerbearer","Chorąży","🚩"],["knight","Rycerz","⚔️"],["treasurer","Skarbnik","💰"],["cav","Kawaleria","🐎"],["runemage","Mag Runiczny","🛡️"],["inquisitor","Inkwizytor","✝️"],["cat","Katapulta","🪨"],["priest","Kapłanka","✨"],["paladin","Paladyn","🛡️"],["swordmaster","Mistrz Miecza","⚔️"],["general","Generał","👑"],["axe","Topornik Mroku","🪓"],["cultist","Kultysta","☠️"],["reaper","Żniwiarz","☠️"],["assassin","Zabójczyni","🗡️"],["shadowhunter","Łowca Cieni","🌑"],["vampire","Wampir","🧛"],["shadowmage","Czarownica Cieni","🧙‍♀️"],["golem","Golem Mroku","🗿"],["demon","Demon Mroku","🔥"],["executioner","Egzekutor Mroku","⚔️"],["dog","Pies","🐕"],["snake","Wąż","🐍"],["slasher","Szarpak","👺"],["spider_web","Pająk","🕷️"],["goblin","Goblin","👹"],["wolf","Wilk","🐺"],["basilisk","Bazyliszek","🦎"],["troll","Troll","🧌"],["ogre","Ogr","👹"],["ent","Ent","🌳"],["bear","Niedźwiedź","🐻"],["hydra","Hydra","🐲"],["kraken","Kraken","🐙"],["woodwarden","Borowy","🦌"],["mantis","Modliszka","🦗"],["darkspearman","Oszczepniczka Mroku","🏹"],["cross","Kusznik Mroku","🏹"],["alch","Alchemiczka Mroku","🧪"],["mage","Mag Mroku","🧙‍♂️"],["necromancer","Nekromanta","💀"]];
+const engineUnitMap=Object.fromEntries(engineUnits.map(([id,name,icon])=>[id,{name,icon}]));
+const engineRarities={"sword":"epicka","pik":"zwykla","archer":"zwykla","sapper":"magiczna","bannerbearer":"magiczna","knight":"zwykla","treasurer":"magiczna","cav":"magiczna","runemage":"magiczna","inquisitor":"epicka","cat":"magiczna","priest":"epicka","paladin":"magiczna","swordmaster":"legendarna","general":"epicka","axe":"magiczna","cultist":"zwykla","reaper":"epicka","assassin":"magiczna","shadowhunter":"magiczna","vampire":"epicka","shadowmage":"epicka","golem":"magiczna","demon":"legendarna","executioner":"epicka","dog":"zwykla","snake":"zwykla","slasher":"magiczna","spider_web":"magiczna","goblin":"epicka","wolf":"epicka","basilisk":"magiczna","troll":"magiczna","ogre":"zwykla","ent":"epicka","bear":"magiczna","hydra":"epicka","kraken":"magiczna","woodwarden":"epicka","mantis":"legendarna","darkspearman":"zwykla","cross":"zwykla","alch":"magiczna","mage":"epicka","necromancer":"epicka"};
+const engineCosts={"sword":3,"pik":3,"archer":3,"sapper":3,"bannerbearer":3,"axe":3,"cultist":3,"reaper":3,"assassin":3,"darkspearman":3,"dog":3,"snake":3,"slasher":3,"spider_web":3,"goblin":3,"knight":5,"treasurer":5,"cav":5,"runemage":5,"inquisitor":5,"cross":5,"alch":5,"shadowhunter":5,"vampire":5,"shadowmage":5,"wolf":5,"basilisk":5,"troll":5,"ogre":5,"ent":5,"cat":8,"priest":8,"paladin":8,"swordmaster":8,"general":8,"mage":8,"necromancer":8,"golem":8,"demon":8,"executioner":8,"bear":8,"hydra":8,"kraken":8,"woodwarden":8,"mantis":8};
+function actualDeckCards(){
+  const ids=readEngineDeck()||[];
+  const costs=[3,3,5,5,8,8];
+  const groups={3:[],5:[],8:[]};
+  for(const id of ids){const cost=engineCosts[id];if(groups[cost]&&groups[cost].length<2)groups[cost].push(id)}
+  return costs.map((cost,i)=>{
+    const id=groups[cost][i%2];
+    if(!id)return '<div class="unit sm-deck-empty" aria-label="Puste miejsce '+(i+1)+' — jednostka za '+cost+' złota"><span>'+cost+'💰</span></div>';
+    const x=engineUnitMap[id]||{name:String(id),icon:'🃏'};
+    return '<button class="unit sm-deck-card" onclick="changeDeckUnit('+JSON.stringify(id).replace(/"/g,'&quot;')+')" aria-label="Usuń '+escapeHtml(x.name)+' — '+cost+' złota"><span>'+x.icon+'</span></button>';
+  }).join('');
+}
+
+const smBaseStats={"Miecznik":[9,178,29,22,12,0.944],"Pikinier":[9,154,43,14,6,1.048],"Łucznik":[9,107,37,4,6,1.06],"Saper":[9,119,27,6,11,0.98],"Chorąży":[9,132,22,10,14,0.894],"Rycerz":[9,404,51,47,22,0.972],"Skarbnik":[9,161,20,10,17,0.794],"Kawaleria":[9,227,61,24,13,1.048],"Mag Runiczny":[9,137,38,7,31,0.98],"Inkwizytor":[9,224,63,20,37,0.93],"Katapulta":[9,167,109,6,10,0.53],"Kapłanka":[9,205,28,10,36,0.944],"Paladyn":[9,413,50,47,37,0.836],"Mistrz Miecza":[9,270,88,21,19,1.324],"Generał":[9,373,48,28,26,0.844],"Topornik Mroku":[9,161,48,13,6,1.107],"Kultysta":[9,97,39,4,21,1.03],"Żniwiarz":[9,139,39,11,16,1.048],"Zabójczyni":[9,107,53,6,10,1.367],"Oszczepniczka Mroku":[9,103,46,6,7,1.06],"Kusznik Mroku":[9,122,72,6,10,0.942],"Alchemiczka Mroku":[9,143,49,10,25,0.93],"Łowca Cieni":[9,146,72,12,14,1.299],"Wampir":[9,315,49,20,22,1.048],"Czarownica Cieni":[9,154,27,6,36,0.944],"Mag Mroku":[9,118,61,5,35,0.98],"Nekromanta":[9,154,43,6,33,0.93],"Golem Mroku":[9,545,43,84,15,0.627],"Demon Mroku":[9,285,87,24,35,1.107],"Egzekutor Mroku":[9,278,76,24,16,0.998],"Pies":[9,95,41,6,6,1.484],"Wąż":[9,98,38,4,16,0.98],"Szarpak":[9,114,45,7,7,1.426],"Pająk":[9,132,25,7,19,1.053],"Goblin":[9,139,41,11,10,1.166],"Wilk":[9,175,50,10,11,1.248],"Bazyliszek":[9,147,36,7,28,0.944],"Troll":[9,548,32,30,12,0.786],"Ogr":[9,511,73,24,6,0.721],"Ent":[9,509,26,25,26,0.736],"Niedźwiedź":[9,636,25,40,15,0.677],"Hydra":[9,402,78,27,25,0.939],"Kraken":[9,295,59,16,35,0.894],"Borowy":[9,350,56,22,37,0.821],"Modliszka":[9,222,92,14,18,1.484]};
+let smUnitId=null,smUnitTab='postac',smReplacePending=null;
+function smOpenUnit(id){smUnitId=id;smUnitTab='postac';smReplacePending=null;smRenderUnit()}
+function smRenderUnit(){
+ const id=smUnitId,u=engineUnitMap[id];if(!u)return;
+ const chosen=(readEngineDeck()||[]).includes(id);
+ const tabs=[['postac','Postać'],['statystyki','Statystyki'],['umiejetnosc','Umiejętność']];
+ const tabButtons='<div class="sm-detail-tabs">'+tabs.map(t=>'<button class="chip '+(smUnitTab===t[0]?'active':'')+'" onclick="smUnitTab='+JSON.stringify(t[0]).replace(/"/g,"'")+';smRenderUnit()">'+t[1]+'</button>').join('')+'</div>';
+ const portrait='<div class="sm-detail-art" id="sm-detail-portrait">'+u.icon+'</div>';
+ const idsNow=readEngineDeck()||[];
+ const swapCandidates=idsNow.filter(x=>engineCosts[x]===engineCosts[id]);
+ const showSwap=!chosen&&smReplacePending===id&&swapCandidates.length===2;
+ const swapChoices=showSwap?'<div class="sm-swap-label">Zamień jedną z postaci:</div><div class="sm-swap-options">'+swapCandidates.map(oldId=>{const oldUnit=engineUnitMap[oldId]||{name:oldId,icon:'🃏'};return '<button type="button" class="unit sm-deck-card sm-swap-card" data-swap-id="'+escapeHtml(oldId)+'" onclick="smReplaceDeckUnit('+JSON.stringify(id).replace(/"/g,"'")+','+JSON.stringify(oldId).replace(/"/g,"'")+')" aria-label="Zamień '+escapeHtml(oldUnit.name)+'"><span>'+oldUnit.icon+'</span></button>'}).join('')+'</div>':'';
+ const action=swapChoices+'<button class="btn sm-detail-action" onclick="smDetailDeckAction('+JSON.stringify(id).replace(/"/g,"'")+')">'+(chosen?'Usuń z decku':'Dodaj do decku')+'</button>';
+ let panel='<h3 class="sm-detail-heading">'+escapeHtml(u.name)+'</h3><p class="sm-detail-meta">Koszt: '+engineCosts[id]+' 💰 · '+escapeHtml(engineRarities[id]||'zwykła')+'</p>';
+ if(smUnitTab==='postac'){
+   panel+='<p class="sm-detail-info">Poziom jednostki: dane progresji konta oczekują na integrację.</p><div class="sm-detail-upgrade"><strong>Ulepszenie jednostki</strong><p class="sm-detail-info">Fragmenty: —<br>Koszt w złocie: —</p><button class="btn" disabled>Ulepsz</button></div>';
+ }else if(smUnitTab==='statystyki'){
+   const a=smBaseStats[u.name],labels=['HP','ATK','Pancerz','Odporność magiczna','APS','Zasięg ataku','Szybkość ruchu','Szansa na krytyk'];
+   const vals=a?[a[0],a[1],a[2],a[3],a[4],'—','—',a[5]*100+'%']:Array(8).fill('—');
+   panel+='<div class="sm-detail-stats">'+labels.map((name,i)=>'<div><span>'+name+'</span><b>'+vals[i]+'</b></div>').join('')+'</div><p class="sm-detail-info">Wartości bazowe z roboczego balansu. Przyrosty poziomów pojawią się po integracji progresji.</p>';
+ }else{
+   panel+='<p class="sm-detail-info">Umiejętności pasywne od 1★, aktywne od 2★, ulepszone na 3★. Opisy i animacje zostaną pobrane z zatwierdzonych definicji jednostek.</p>';
+ }
+ const html=tabButtons+'<div class="sm-detail-layout"><div class="sm-detail-left">'+portrait+action+'</div><div class="sm-detail-right">'+panel+'</div></div>';
+ modal(u.name,html);
+ const dialog=document.getElementById('modal');
+ dialog.classList.add('sm-unit-dialog');
+ dialog.classList.remove('sm-detail-common','sm-detail-magic','sm-detail-epic','sm-detail-legendary');
+ dialog.classList.add(({zwykla:'sm-detail-common',magiczna:'sm-detail-magic',epicka:'sm-detail-epic',legendarna:'sm-detail-legendary'})[engineRarities[id]]||'sm-detail-common');
+ const target=document.getElementById('sm-detail-portrait');
+ const assets=window.SteelCardAssets;
+ if(target&&assets){if(assets.isReady())assets.apply(target,id,true);else assets.init().then(ok=>{if(ok&&smUnitId===id&&document.getElementById('sm-detail-portrait')===target)assets.apply(target,id,true)})}
+ if(assets){const applySwaps=()=>{document.querySelectorAll('#modal .sm-swap-card[data-swap-id]').forEach(button=>{if(!button.querySelector('.sm-art')){const span=document.createElement('span');span.className='sm-art';const icon=button.querySelector('span');if(icon)span.append(icon.cloneNode(true));button.replaceChildren(span);assets.apply(span,button.dataset.swapId,false)}})};if(assets.isReady())applySwaps();else assets.init().then(ok=>{if(ok&&smUnitId===id)applySwaps()})}
+}
+
+function smDetailDeckAction(id){
+ const ids=readEngineDeck()||[];
+ if(!ids.includes(id)&&ids.filter(x=>engineCosts[x]===engineCosts[id]).length>=2){
+   smReplacePending=id;smRenderUnit();return;
+ }
+ smReplacePending=null;changeDeckUnit(id);smRenderUnit();
+}
+function smReplaceDeckUnit(newId,oldId){
+ const ids=readEngineDeck()||[];
+ if(ids.includes(newId)||!ids.includes(oldId)||engineCosts[newId]!==engineCosts[oldId])return;
+ ids[ids.indexOf(oldId)]=newId;
+ localStorage.setItem('gridclash_deck',JSON.stringify(ids));
+ localStorage.setItem('sm_deck_slot_'+(activeDeck+1),JSON.stringify(ids));
+ smReplacePending=null;renderDeck();renderPlay();smRenderUnit();
+}
+function changeDeckUnit(id){
+  const ids=readEngineDeck()||[];
+  if(ids.includes(id)){ids.splice(ids.indexOf(id),1)}
+  else{
+    const cost=engineCosts[id];
+    if(!cost)return;
+    if(ids.filter(x=>engineCosts[x]===cost).length>=2){alert('Możesz wybrać maksymalnie 2 jednostki za '+cost+' złota. Usuń najpierw jedną z talii.');return}
+    ids.push(id);
+  }
+  localStorage.setItem('gridclash_deck',JSON.stringify(ids));
+  localStorage.setItem('sm_deck_slot_'+(activeDeck+1),JSON.stringify(ids));
+  renderDeck();renderPlay();
+}
+function renderDeck(){
+  $('deckchips').innerHTML=decksets.map((_,i)=>`<button class="chip ${i===activeDeck?'active':''}" onclick="selectDeck(${i})">${i+1}</button>`).join('');
+  $('deckcards').innerHTML=actualDeckCards();
+  const ids=readEngineDeck()||[];
+  const counts=[3,5,8].map(c=>ids.filter(id=>engineCosts[id]===c).length);
+  $('collection').innerHTML=
+    engineUnits.filter(x=>engineCosts[x[0]]&&!ids.includes(x[0])).sort((a,b)=>engineCosts[a[0]]-engineCosts[b[0]]||a[1].localeCompare(b[1],'pl'))
+    .map(([id,name,icon])=>`<button class="tile sm-rarity-${engineRarities[id]}" onclick="smOpenUnit('${id}')" aria-pressed="${ids.includes(id)}"><span class="sm-collection-portrait">${icon}</span><span class="sm-collection-caption"><b>${escapeHtml(name)}</b><b>${engineCosts[id]}💰</b></span></button>`).join('');
+}
+function readEngineDeck(){try{const x=JSON.parse(localStorage.getItem('gridclash_deck'));return Array.isArray(x)&&x.every(id=>typeof id==='string'||typeof id==='number')?x:null}catch(e){return null}}
+function persistEngineSlot(){try{const slot=Number(localStorage.getItem('sm_active_deck_slot'))||1;const ids=readEngineDeck();if(slot>=1&&slot<=5&&ids)localStorage.setItem('sm_deck_slot_'+slot,JSON.stringify(ids))}catch(e){}}
+function syncReturningEngineDeck(){try{
+  const launched=Number(sessionStorage.getItem('sm_engine_launch_slot'));
+  if(!Number.isInteger(launched)||launched<1||launched>5)return;
+  const currentIds=readEngineDeck();if(!currentIds||currentIds.length>6||new Set(currentIds).size!==currentIds.length||currentIds.some(id=>!engineCosts[id])||[3,5,8].some(c=>currentIds.filter(id=>engineCosts[id]===c).length>2))return;
+  localStorage.setItem('sm_deck_slot_'+launched,JSON.stringify(currentIds));
+}catch(e){}}
+function refreshDeckPreview(){if(document.getElementById('deckcards'))renderDeck();if(document.getElementById('playdeck'))renderPlay()}
+window.addEventListener('pageshow',function(event){if(event.persisted){syncReturningEngineDeck();refreshDeckPreview()}});
+window.addEventListener('focus',function(){try{if(sessionStorage.getItem('sm_engine_launch_slot')){syncReturningEngineDeck();refreshDeckPreview()}}catch(e){}});
+function selectDeck(i){if(!Number.isInteger(i)||i<0||i>=decksets.length)return;try{
+  persistEngineSlot();
+  const next=i+1;
+  const stored=localStorage.getItem('sm_deck_slot_'+next);
+  if(stored!==null){const ids=JSON.parse(stored);if(Array.isArray(ids)&&ids.every(id=>engineCosts[id])&&new Set(ids).size===ids.length)localStorage.setItem('gridclash_deck',JSON.stringify(ids));else localStorage.setItem('gridclash_deck','[]')}
+  else{localStorage.setItem('sm_deck_slot_'+next,JSON.stringify([]));localStorage.setItem('gridclash_deck',JSON.stringify([]))}
+  activeDeck=i;localStorage.setItem('steel_magic_menu_active_deck',String(i));localStorage.setItem('sm_active_deck_slot',String(next))
+}catch(e){activeDeck=i}renderDeck();renderPlay()}
+function renderPlay(){$('playdeck').innerHTML=actualDeckCards()}
+const shopTabs=['Oferty','Jednostki','Skrzynie','Zasoby','Sezon'];
+const smRewards=[{icon:'🪙',label:'100 złota'},{icon:'🪙',label:'200 złota'},{icon:'🪙',label:'300 złota'},{icon:'🪙',label:'500 złota'},{icon:'🃏',label:'3 fragmenty 3g'},{icon:'🃏',label:'5 fragmentów 3g'},{icon:'⚔️',label:'2 fragmenty 5g'},{icon:'💎',label:'10 kryształów'}];
+const smSeasonRewards=Array.from({length:30},(_,i)=>({day:i+1,icon:i%7===6?'🎁':i%5===4?'💎':i%3===2?'🃏':'🪙'}));
+let smWheelRunning=false,smWheelOffset=0;
+function smShopNotice(title){info(title,'Funkcja przygotowana wizualnie w TEST 17.6. Transakcje, reklamy i przyznawanie nagród wymagają podłączenia serwera konta.')}
+function smShopTile(title,art,detail,button,accent){
+ return '<div class="sm-shop-tile '+(accent||'')+'"><div class="sm-shop-tile-title">'+title+'</div><div class="sm-shop-illustration">'+art+'</div><div class="sm-shop-desc">'+detail+'</div><button class="btn sm-shop-buy" onclick="smShopNotice(\''+title+'\')">'+button+'</button></div>';
+}
+function smWheelMarkup(){
+ const strip=Array.from({length:40},(_,i)=>{const r=smRewards[i%smRewards.length];return '<div class="sm-reward-tile"><span>'+r.icon+'</span><small>'+r.label+'</small></div>'}).join('');
+ return '<div class="sm-shop-lottery"><div class="sm-lottery-heading">✦ KOŁO FORTUNY ✦</div><div class="sm-lottery-desc">Przesuwające się nagrody • 3 losowania dziennie za reklamy</div><div class="sm-wheel-window"><div class="sm-wheel-strip" id="sm-wheel-strip">'+strip+'</div><div class="sm-wheel-target" aria-hidden="true"></div></div><div class="sm-wheel-status" id="sm-wheel-status">Nagroda zatrzymana w środkowej ramce jest wygraną</div><button class="btn full" id="sm-wheel-button" onclick="smWheelDemo()">▶ TESTUJ LOSOWANIE</button><small class="sm-wheel-disclaimer">Tryb demonstracyjny — bez reklamy i przyznawania nagrody na konto</small></div>';
+}
+function smWheelDemo(){
+ if(smWheelRunning)return;
+ const strip=document.getElementById('sm-wheel-strip'),button=document.getElementById('sm-wheel-button'),status=document.getElementById('sm-wheel-status');
+ if(!strip||!button)return;
+ smWheelRunning=true;button.disabled=true;status.textContent='Losowanie trwa…';
+ const cells=strip.children;const width=cells[0].getBoundingClientRect().width+8;
+ const target=18+Math.floor(Math.random()*8);
+ const windowWidth=strip.parentElement.clientWidth;
+ const translate=target*width-(windowWidth-width)/2;
+ strip.style.transition='transform 4.3s cubic-bezier(.11,.72,.14,1)';
+ strip.style.transform='translateX(-'+translate+'px)';
+ setTimeout(()=>{
+  const r=smRewards[target%smRewards.length];status.textContent='Wylosowano: '+r.label+' (podgląd — bez zapisu na konto)';
+  smWheelRunning=false;button.disabled=false;button.textContent='▶ LOSUJ PONOWNIE (DEMO)';
+  strip.style.transition='none';strip.style.transform='translateX(0)';void strip.offsetWidth;
+ },4450);
+}
+function smSeasonMarkup(){
+ const today=new Date().getDate();const claimed=localStorage.getItem('sm_season_demo_day')===new Date().toDateString();
+ return '<div class="sm-season-header"><strong>📅 KALENDARZ SEZONU</strong><p>30 dni drobnych nagród za codzienne logowanie</p></div><div class="sm-season-grid">'+smSeasonRewards.map(r=>'<div class="sm-season-day '+(r.day===today?'today':'')+'"><small>Dzień '+r.day+'</small><span>'+r.icon+'</span></div>').join('')+'</div><button class="btn full" onclick="smSeasonDemo()">'+(claimed?'ODEBRANO W DEMO':'ODBIERZ NAGRODĘ DNIA (DEMO)')+'</button><p class="sm-shop-footnote">Kalendarz jest demonstracyjny. Odbiór nagród i sezon muszą być synchronizowane z serwerem.</p>';
+}
+function smSeasonDemo(){
+ const key='sm_season_demo_day',today=new Date().toDateString();
+ if(localStorage.getItem(key)===today){info('Kalendarz sezonowy','Dzisiejsza nagroda została już oznaczona w podglądzie.');return;}
+ localStorage.setItem(key,today);info('Kalendarz sezonowy','Oznaczono dzisiejszy odbiór w podglądzie. Nagroda nie została dodana do konta.');renderShop();
+}
+function renderShop(){
+ $('shopchips').innerHTML=shopTabs.map(x=>'<button class="chip '+(shopSub===x?'active':'')+'" onclick="shopSub=\''+x+'\';renderShop()">'+x+'</button>').join('');
+ let html='';
+ if(shopSub==='Oferty'){
+  html=smWheelMarkup();
+  html+='<h2 class="sm-shop-section">SKRZYNIE SKARBÓW</h2><div class="sm-shop-grid">'+smShopTile('BRĄZOWA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Brazowa_B_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Brazowa_B_Zamknieta">','Złoto i fragmenty jednostek','SZCZEGÓŁY','bronze')+smShopTile('SREBRNA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Srebrna_B_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Srebrna_B_Zamknieta">','Więcej fragmentów i szansa na epickie','SZCZEGÓŁY','silver')+smShopTile('ZŁOTA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Zlota_A_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Zlota_A_Zamknieta">','Najbogatsza pula nagród','SZCZEGÓŁY','gold')+'</div>';
+  html+='<div class="sm-shop-promo"><strong>📅 Logowanie sezonowe</strong><span>Odbieraj drobną nagrodę każdego dnia sezonu</span><button class="btn" onclick="shopSub=\'Sezon\';renderShop()">KALENDARZ</button></div>';
+  html+='<h2 class="sm-shop-section">ZASOBY</h2><div class="sm-shop-grid two"><button class="btn" onclick="shopSub=\'Zasoby\';renderShop()">🪙 PAKIETY ZŁOTA</button><button class="btn" onclick="shopSub=\'Zasoby\';renderShop()">💎 PAKIETY KRYSZTAŁÓW</button></div>';
+  html+='<div class="sm-shop-promo"><strong>🎁 Nagroda dzienna</strong><span>Codzienny bonus — integracja z kontem w przygotowaniu</span><button class="btn" onclick="smShopNotice(\'Nagroda dzienna\')">ODBIERZ</button></div>';
+  html+='<h2 class="sm-shop-section">ZESTAWY SPECJALNE</h2><div class="sm-shop-grid two">'+smShopTile('NA START','🎒','Pakiet powitalny dla nowych graczy','ZOBACZ','gold')+smShopTile('SEZONOWY','👑','Okazjonalny zestaw sezonowy','ZOBACZ','crystal')+'</div>';
+ }else if(shopSub==='Sezon'){html=smSeasonMarkup();}
+ else if(shopSub==='Skrzynie'){html='<h2 class="sm-shop-section">SKRZYNIE SKARBÓW</h2><div class="sm-shop-grid">'+smShopTile('BRĄZOWA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Brazowa_B_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Brazowa_B_Zamknieta">','50–100 złota, 3–5 zwykłych fragmentów i magiczny fragment','SZCZEGÓŁY','bronze')+smShopTile('SREBRNA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Srebrna_B_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Srebrna_B_Zamknieta">','100–175 złota, fragmenty zwykłe, magiczne i epickie','SZCZEGÓŁY','silver')+smShopTile('ZŁOTA','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Steel_Magic_Skrzynia_Zlota_A_Zamknieta.webp" alt="Steel_Magic_Skrzynia_Zlota_A_Zamknieta">','250–350 złota i fragmenty trzech rzadkości','SZCZEGÓŁY','gold')+'</div>';}
+ else if(shopSub==='Zasoby'){html='<h2 class="sm-shop-section">PAKIETY ZŁOTA</h2><div class="sm-shop-grid">'+smShopTile('Złoto — średni stos','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Zloto_Stos_Sredni.webp" alt="Złoto — średni stos">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','gold')+smShopTile('Złoto — duży stos','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Zloto_Stos_Duzy.webp" alt="Złoto — duży stos">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','gold')+smShopTile('Złoto — skrzynia','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Zloto_Skrzynia_Najwiekszy.webp" alt="Złoto — skrzynia">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','gold')+'</div><h2 class="sm-shop-section">PAKIETY KRYSZTAŁÓW</h2><div class="sm-shop-grid">'+smShopTile('Kryształy — mały stos','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Krysztaly_Maly_Stos.webp" alt="Kryształy — mały stos">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','crystal')+smShopTile('Kryształy — sakiewka','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Krysztaly_Srednia_Sakiewka.webp" alt="Kryształy — sakiewka">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','crystal')+smShopTile('Kryształy — duża sakiewka','<img class="sm-chest-art sm-approved-art" src="/game/assets/shop/approved/Krysztaly_Duza_Sakiewka.webp" alt="Kryształy — duża sakiewka">','Grafika zatwierdzonego pakietu','SZCZEGÓŁY','crystal')+'</div>'+'<p class="sm-shop-footnote">Pakiety i ceny nie są jeszcze zatwierdzone.</p>';}
+ else{html='<h2 class="sm-shop-section">IKONY JEDNOSTEK</h2><p class="sm-shop-footnote">Oficjalne ikony sklepowe.</p>';}
+ $('shopbody').innerHTML=html;
+}
+
+/* TEST 17.6: Shop icons must be dedicated assets, not portraits or card crops. */
+(function(){
+  const shop=document.getElementById('shopbody');if(!shop)return;
+  let pending=false;
+  let shopManifestPromise=null;
+  function loadShopManifest(){
+    if(!shopManifestPromise){
+      shopManifestPromise=fetch('/game/cards/deck_assets.json').then(response=>{
+        if(!response.ok)throw new Error('Shop manifest unavailable');
+        return response.json();
+      }).catch(error=>{shopManifestPromise=null;throw error});
+    }
+    return shopManifestPromise;
+  }
+  async function decorate(){
+    if(pending||typeof shopSub==='undefined'||shopSub!=='Jednostki'||shop.querySelector('.sm-shop-icons'))return;
+    pending=true;
+    try{
+      const manifest=await loadShopManifest();if(!Array.isArray(manifest.units))return;
+      if(shopSub!=='Jednostki')return;
+      const list=document.createElement('div');list.className='grid2 sm-shop-icons';
+      for(const unit of manifest.units){
+        const tile=document.createElement('div');tile.className='card';tile.style.textAlign='center';
+        const art=document.createElement('div');art.style.cssText='width:76px;height:76px;margin:0 auto 7px;border-radius:9px;overflow:hidden;background:#29384c;display:grid;place-items:center';
+        art.textContent='⚔';art.setAttribute('aria-label','Ikona jednostki oczekuje na zatwierdzony plik');
+        if(typeof unit.shopIcon==='string'&&/^cards\/shop-icons\/[a-zA-Z0-9_-]+\.webp$/.test(unit.shopIcon)){
+          const img=new Image();img.alt=unit.name;img.style.cssText='width:100%;height:100%;object-fit:contain';
+          img.onload=()=>art.replaceChildren(img);img.src='/game/'+unit.shopIcon;
+        }
+        const title=document.createElement('div');title.textContent=unit.name;title.style.fontWeight='700';
+        const cost=document.createElement('div');cost.textContent='Koszt w walce: '+unit.cost+' złota';cost.className='tiny';
+        tile.append(art,title,cost);list.append(tile);
+      }
+      if(shopSub==='Jednostki')shop.append(list);
+    }catch(_){/* Do not substitute portraits for missing shop icons. */}finally{pending=false}
+  }
+  new MutationObserver(()=>{if(shopSub==='Jednostki'&&!shop.querySelector('.sm-shop-icons'))decorate()}).observe(shop,{childList:true});
+  document.addEventListener('DOMContentLoaded',decorate);
+})();
+const guildTabs=['Członkowie','Wojny','Sklep','Czat','Wnioski'];
+const members=[['ŻelaznyWilk','IV',1240],['MrocznaIskra','V',1820],['SrebrnyMiecz','III',890],['RunicznyMag','IV',1300]];
+let msgs=[['ŻelaznyWilk','Witajcie w gildii!'],['MrocznaIskra','Kto zagra dziś Katakumby?']];
+function renderGuild(){ $('guildchips').innerHTML=guildTabs.map(x=>`<button class="chip ${guildSub===x?'active':''}" onclick="guildSub='${x}';renderGuild()">${x}</button>`).join('');let body='';if(guildSub==='Członkowie'){body='<div class="card">'+members.slice().sort((a,b)=>b[2]-a[2]).map(m=>`<div class="entry row"><div><b>${m[0]}</b><div class="tiny">Dywizja ${m[1]} • ${m[2]} pkt</div></div><button class="btn secondary" onclick="member('${m[0]}')">Profil</button></div>`).join('')+'</div>'}else if(guildSub==='Czat'){body='<div class="card chat"><div class="messages" id="messages">'+msgs.map(m=>`<div class="bubble"><b style="color:var(--gold)">${m[0]}</b><div>${escapeHtml(m[1])}</div></div>`).join('')+'</div><div class="compose"><button class="btn secondary" onclick="emoji()">☺</button><input id="chatinput" placeholder="Wpisz wiadomość..." maxlength="250" onkeydown="if(event.key===\'Enter\')send()"><button class="btn" onclick="send()">➤</button></div></div><button class="btn secondary full" onclick="info(\'Udostępnianie decku\',\'Docelowo udostępnimy migawkę 6 kart z chwili wysłania.\')">Udostępnij deck</button>'}else{body='<div class="card"><h2>'+guildSub+'</h2><p class="muted">Sekcja do dalszego dopracowania.</p></div>'}$('guildbody').innerHTML=body;if(guildSub==='Czat')$('messages').scrollTop=$('messages').scrollHeight}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function send(){let input=$('chatinput');if(!input||!input.value.trim())return;msgs.push(['Ty',input.value.trim()]);renderGuild()}
+function emoji(){let input=$('chatinput');input.value+='🙂';input.focus()}
+function member(name){modal('Karta gracza',`<h2>${name}</h2><p>Profil publiczny — dane testowe.</p><div class="deckcards">${cards(decksets[0])}</div><p>Skuteczność sezonowa • wygrane rankingowe • rekord punktów</p>`)}
+function ranking(){modal('Ranking',`<p>Ranking znajduje się w zakładce Graj.</p><div class="card">${members.slice().sort((a,b)=>b[2]-a[2]).map((m,i)=>`<div class="entry">${i+1}. ${m[0]} — ${m[2]} pkt</div>`).join('')}</div>`)}
+function deckBackup(){
+  persistEngineSlot();
+  const data={version:1,activeDeck:activeDeck+1,decks:[]};
+  const valid=ids=>Array.isArray(ids)&&ids.length<=6&&new Set(ids).size===ids.length&&ids.every(id=>typeof id==='string'&&engineCosts[id])&&[3,5,8].every(c=>ids.filter(id=>engineCosts[id]===c).length<=2);
+  for(let i=1;i<=5;i++){
+    let ids;
+    try{ids=JSON.parse(localStorage.getItem('sm_deck_slot_'+i)||'[]')}catch(e){alert('Nie można wykonać kopii: uszkodzony deck '+i+'.');return}
+    if(!valid(ids)){alert('Nie można wykonać kopii: nieprawidłowy deck '+i+'.');return}
+    data.decks.push(ids);
+  }
+  const content=JSON.stringify(data,null,2);
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(content).then(()=>alert('Kopia pięciu decków skopiowana.')).catch(()=>prompt('Skopiuj kopię decków:',content));
+  else prompt('Skopiuj kopię decków:',content);
+}
+function restoreDeckBackup(){
+  const raw=prompt('Wklej wcześniej skopiowany zapis pięciu decków (JSON):');
+  if(raw===null)return;
+  let data;try{data=JSON.parse(raw)}catch(e){alert('Nieprawidłowy format JSON.');return}
+  if(!data||data.version!==1||!Array.isArray(data.decks)||data.decks.length!==5||!Number.isInteger(data.activeDeck)||data.activeDeck<1||data.activeDeck>5){alert('Nieprawidłowa kopia pięciu decków.');return}
+  const valid=ids=>Array.isArray(ids)&&ids.length<=6&&new Set(ids).size===ids.length&&ids.every(id=>typeof id==='string'&&engineCosts[id])&&[3,5,8].every(c=>ids.filter(id=>engineCosts[id]===c).length<=2);
+  if(!data.decks.every(valid)){alert('Kopia zawiera nieznane lub powtórzone jednostki albo przekroczone limity.');return}
+  if(!confirm('Zastąpić wszystkie pięć zapisanych decków danymi z kopii?'))return;
+  for(let i=0;i<5;i++)localStorage.setItem('sm_deck_slot_'+(i+1),JSON.stringify(data.decks[i]));
+  activeDeck=data.activeDeck-1;
+  localStorage.setItem('sm_active_deck_slot',String(data.activeDeck));
+  localStorage.setItem('steel_magic_menu_active_deck',String(activeDeck));
+  localStorage.setItem('gridclash_deck',JSON.stringify(data.decks[activeDeck]));
+  renderDeck();renderPlay();alert('Przywrócono pięć decków.');
+}
+function deckReady(){const ids=readEngineDeck()||[];if(ids.length===6&&[3,5,8].every(c=>ids.filter(id=>engineCosts[id]===c).length===2))return true;switchTab('deck');alert('Uzupełnij talię: wybierz po 2 jednostki za 3, 5 i 8 złota.');return false}
+function friendBattle(){if(!deckReady())return;persistEngineSlot();try{sessionStorage.setItem("sm_engine_launch_slot",String(activeDeck+1))}catch(e){}window.location.href="/v57-balance-test?mode=friend"}
+function battle(online=false){if(!deckReady())return;persistEngineSlot();try{sessionStorage.setItem('sm_engine_launch_slot',String(activeDeck+1))}catch(e){}window.location.href=online?'/v57-balance-test?mode=pvp':'/v57-balance-test?mode=ai'}
+function finishBattle(){$('battleview').classList.add('hide');$('battleend').classList.remove('hide');$('battletitle').textContent='Koniec bitwy'}
+function backToMenu(){$('battle').classList.remove('show');scrolls.play=0;switchTab('play');$('content').scrollTop=0}
+try{const launched=sessionStorage.getItem('sm_engine_launch_slot');if(launched){syncReturningEngineDeck();sessionStorage.removeItem('sm_engine_launch_slot')}}catch(e){}try{const saved=Number(localStorage.getItem('sm_active_deck_slot'));if(Number.isInteger(saved)&&saved>=1&&saved<=5)activeDeck=saved-1;else{const old=Number(localStorage.getItem('steel_magic_menu_active_deck'));if(Number.isInteger(old)&&old>=0&&old<5)activeDeck=old}localStorage.setItem('sm_active_deck_slot',String(activeDeck+1));const key='sm_deck_slot_'+(activeDeck+1);if(localStorage.getItem(key)===null){const ids=readEngineDeck();if(ids)localStorage.setItem(key,JSON.stringify(ids))}else{const stored=JSON.parse(localStorage.getItem(key));if(Array.isArray(stored)&&stored.length<=6&&new Set(stored).size===stored.length&&stored.every(id=>engineCosts[id])&&[3,5,8].every(c=>stored.filter(id=>engineCosts[id]===c).length<=2))localStorage.setItem('gridclash_deck',JSON.stringify(stored));else localStorage.setItem('gridclash_deck','[]')}}catch(e){}try{renderDeck();renderShop();renderGuild();switchTab(['shop','deck','play','guild'].includes(new URLSearchParams(location.search).get('tab'))?new URLSearchParams(location.search).get('tab'):'play')}catch(e){console.error('Steel & Magic menu init',e);document.getElementById('content').innerHTML='<div class="card"><h2>Nie udało się załadować menu</h2><p>Odśwież stronę. Jeśli problem wróci, prześlij zrzut ekranu.</p></div>';document.getElementById('sm-loading')?.remove()}
+</script><script src="/game/card-assets-adapter.js"></script><script>
+(function(){
+  const run=()=>{const a=window.SteelCardAssets;if(!a||!a.isReady())return;
+    document.querySelectorAll('#collection button.tile').forEach(b=>{
+      const call=b.getAttribute('onclick')||'';
+      const match=call.match(/(?:changeDeckUnit|smOpenUnit)\('([^']+)'\)/);
+      if(!match||b.querySelector('.sm-art'))return;
+      const icon=b.querySelector('span');if(!icon)return;
+      const wrap=document.createElement('span');wrap.className='sm-art';
+      wrap.style.cssText='display:block;width:100%;height:100%;aspect-ratio:3/4;overflow:hidden;border-radius:0;margin:0';
+      wrap.append(icon.cloneNode(true));if(a.apply(wrap,match[1],false))icon.replaceWith(wrap);
+    });
+    document.querySelectorAll('#deckcards button.unit,#playdeck button.unit').forEach(b=>{
+      if(b.querySelector('.sm-art'))return;
+      const call=b.getAttribute('onclick')||'';
+      const match=call.match(/changeDeckUnit\((?:&quot;|")([^"&]+)(?:&quot;|")\)/);
+      if(!match)return;
+      const entry=[match[1]];
+      const icon=b.querySelector('span');if(!icon)return;
+      const wrap=document.createElement('span');wrap.className='sm-art';
+      wrap.style.cssText='display:block;width:100%;height:100%;overflow:hidden;border-radius:0';
+      wrap.append(icon.cloneNode(true));if(a.apply(wrap,entry[0],false))icon.replaceWith(wrap);
+    });
+  };
+  document.addEventListener('steel-card-assets-ready',run);
+  document.addEventListener('DOMContentLoaded',()=>{
+    window.SteelCardAssets?.init();
+    let portraitRefreshPending=false;
+    const observer=new MutationObserver(()=>{
+      if(!window.SteelCardAssets?.isReady()||portraitRefreshPending)return;
+      portraitRefreshPending=true;
+      requestAnimationFrame(()=>{portraitRefreshPending=false;run()});
+    });
+    for(const id of ['collection','deckcards','playdeck']){const node=document.getElementById(id);if(node)observer.observe(node,{childList:true})}
+  });
+})();
+</script></body></html>

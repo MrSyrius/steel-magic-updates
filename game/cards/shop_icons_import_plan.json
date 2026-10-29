@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "status": "assets-awaiting-repository-upload",
+  "sourceDriveFolder": "https://drive.google.com/drive/folders/1Tsd49KtRascQ8yeIV7hG_cIFZw0gOO5J",
+  "sourceZip": "Steel_Magic_Ikony_Sklep_Komplet.zip",
+  "units": [
+    {
+      "id": "alchemiczka_mroku",
+      "filename": "alchemiczka-mroku.webp",
+      "target": "web/game/cards/shop-icons/alchemiczka-mroku.webp"
+    },
+    {
+      "id": "bazyliszek_bestie",
+      "filename": "bazyliszek-bestie.webp",
+      "target": "web/game/cards/shop-icons/bazyliszek-bestie.webp"
+    },
+    {
+      "id": "borowy_bestie",
+      "filename": "borowy-bestie.webp",
+      "target": "web/game/cards/shop-icons/borowy-bestie.webp"
+    },
+    {
+      "id": "chorazy",
+      "filename": "chorazy.webp",
+      "target": "web/game/cards/shop-icons/chorazy.webp"
+    },
+    {
+      "id": "czarownica_cieni",
+      "filename": "czarownica-cieni.webp",
+      "target": "web/game/cards/shop-icons/czarownica-cieni.webp"
+    },
+    {
+      "id": "demon_mroku",
+      "filename": "demon-mroku.webp",
+      "target": "web/game/cards/shop-icons/demon-mroku.webp"
+    },
+    {
+      "id": "egzekutor_mroku",
+      "filename": "egzekutor-mroku.webp",
+      "target": "web/game/cards/shop-icons/egzekutor-mroku.webp"
+    },
+    {
+      "id": "ent_bestie",
+      "filename": "ent-bestie.webp",
+      "target": "web/game/cards/shop-icons/ent-bestie.webp"
+    },
+    {
+      "id": "general",
+      "filename": "general.webp",
+      "target": "web/game/cards/shop-icons/general.webp"
+    },
+    {
+      "id": "goblin_bestie",
+      "filename": "goblin-bestie.webp",
+      "target": "web/game/cards/shop-icons/goblin-bestie.webp"
+    },
+    {
+      "id": "golem_mroku",
+      "filename": "golem-mroku.webp",
+      "target": "web/game/cards/shop-icons/golem-mroku.webp"
+    },
+    {
+      "id": "hydra_bestie",
+      "filename": "hydra-bestie.webp",
+      "target": "web/game/cards/shop-icons/hydra-bestie.webp"
+    },
+    {
+      "id": "inkwizytor",
+      "filename": "inkwizytor.webp",
+      "target": "web/game/cards/shop-icons/inkwizytor.webp"
+    },
+    {
+      "id": "kaplanka",
+      "filename": "kaplanka.webp",
+      "target": "web/game/cards/shop-icons/kaplanka.webp"
+    },
+    {
+      "id": "katapulta",
+      "filename": "katapulta.webp",
+      "target": "web/game/cards/shop-icons/katapulta.webp"
+    },
+    {
+      "id": "kawaleria",
+      "filename": "kawaleria.webp",
+      "target": "web/game/cards/shop-icons/kawaleria.webp"
+    },
+    {
+      "id": "kraken_bestie",
+      "filename": "kraken-bestie.webp",
+      "target": "web/game/cards/shop-icons/kraken-bestie.webp"
+    },
+    {
+      "id": "kultysta",
+      "filename": "kultysta.webp",
+      "target": "web/game/cards/shop-icons/kultysta.webp"
+    },
+    {
+      "id": "kusznik_mroku",
+      "filename": "kusznik-mroku.webp",
+      "target": "web/game/cards/shop-icons/kusznik-mroku.webp"
+    },
+    {
+      "id": "lowca_cieni",
+      "filename": "lowca-cieni.webp",
+      "target": "web/game/cards/shop-icons/lowca-cieni.webp"
+    },
+    {
+      "id": "lucznik",
+      "filename": "lucznik.webp",
+      "target": "web/game/cards/shop-icons/lucznik.webp"
+    },
+    {
+      "id": "mag_mroku",
+      "filename": "mag-mroku.webp",
+      "target": "web/game/cards/shop-icons/mag-mroku.webp"
+    },
+    {
+      "id": "miecznik",
+      "filename": "miecznik.webp",
+      "target": "web/game/cards/shop-icons/miecznik.webp"
+    },
+    {
+      "id": "mistrz_miecza",
+      "filename": "mistrz-miecza.webp",
+      "target": "web/game/cards/shop-icons/mistrz-miecza.webp"
+    },
+    {
+      "id": "modliszka_bestie",
+      "filename": "modliszka-bestie.webp",
+      "target": "web/game/cards/shop-icons/modliszka-bestie.webp"
+    },
+    {
+      "id": "nekromanta",
+      "filename": "nekromanta.webp",
+      "target": "web/game/cards/shop-icons/nekromanta.webp"
+    },
+    {
+      "id": "niedzwiedz_bestie",
+      "filename": "niedzwiedz-bestie.webp",
+      "target": "web/game/cards/shop-icons/niedzwiedz-bestie.webp"
+    },
+    {
+      "id": "ogr_bestie",
+      "filename": "ogr-bestie.webp",
+      "target": "web/game/cards/shop-icons/ogr-bestie.webp"
+    },
+    {
+      "id": "oszczepniczka_mroku",
+      "filename": "oszczepniczka-mroku.webp",
+      "target": "web/game/cards/shop-icons/oszczepniczka-mroku.webp"
+    },
+    {
+      "id": "pajak_bestie",
+      "filename": "pajak-bestie.webp",
+      "target": "web/game/cards/shop-icons/pajak-bestie.webp"
+    },
+    {
+      "id": "paladyn_kobieta",
+      "filename": "paladyn-kobieta.webp",
+      "target": "web/game/cards/shop-icons/paladyn-kobieta.webp"
+    },
+    {
+      "id": "pies_bestie",
+      "filename": "pies-bestie.webp",
+      "target": "web/game/cards/shop-icons/pies-bestie.webp"
+    },
+    {
+      "id": "pikinier",
+      "filename": "pikinier.webp",
+      "target": "web/game/cards/shop-icons/pikinier.webp"
+    },
+    {
+      "id": "rycerz",
+      "filename": "rycerz.webp",
+      "target": "web/game/cards/shop-icons/rycerz.webp"
+    },
+    {
+      "id": "saper",
+      "filename": "saper.webp",
+      "target": "web/game/cards/shop-icons/saper.webp"
+    },
+    {
+      "id": "skarbnik",
+      "filename": "skarbnik.webp",
+      "target": "web/game/cards/shop-icons/skarbnik.webp"
+    },
+    {
+      "id": "szarpak_bestie",
+      "filename": "szarpak-bestie.webp",
+      "target": "web/game/cards/shop-icons/szarpak-bestie.webp"
+    },
+    {
+      "id": "szkielet_wojownik",
+      "filename": "szkielet-wojownik.webp",
+      "target": "web/game/cards/shop-icons/szkielet-wojownik.webp"
+    },
+    {
+      "id": "topornik_mroku",
+      "filename": "topornik-mroku.webp",
+      "target": "web/game/cards/shop-icons/topornik-mroku.webp"
+    },
+    {
+      "id": "troll_bestie",
+      "filename": "troll-bestie.webp",
+      "target": "web/game/cards/shop-icons/troll-bestie.webp"
+    },
+    {
+      "id": "wampir_mroku",
+      "filename": "wampir-mroku.webp",
+      "target": "web/game/cards/shop-icons/wampir-mroku.webp"
+    },
+    {
+      "id": "waz_bestie",
+      "filename": "waz-bestie.webp",
+      "target": "web/game/cards/shop-icons/waz-bestie.webp"
+    },
+    {
+      "id": "wilk_bestie",
+      "filename": "wilk-bestie.webp",
+      "target": "web/game/cards/shop-icons/wilk-bestie.webp"
+    },
+    {
+      "id": "wilk_przywolany_bestie",
+      "filename": "wilk-przywolany-bestie.webp",
+      "target": "web/game/cards/shop-icons/wilk-przywolany-bestie.webp"
+    },
+    {
+      "id": "zabojczyni_mroku",
+      "filename": "zabojczyni-mroku.webp",
+      "target": "web/game/cards/shop-icons/zabojczyni-mroku.webp"
+    },
+    {
+      "id": "zniwiarz_mroku",
+      "filename": "zniwiarz-mroku.webp",
+      "target": "web/game/cards/shop-icons/zniwiarz-mroku.webp"
+    }
+  ]
+}
