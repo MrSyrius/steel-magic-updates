@@ -1,0 +1,356 @@
+{
+  "season": 1,
+  "level": 1,
+  "units": {
+    "sword": {
+      "hp": 115,
+      "atk": 23,
+      "armor": 16,
+      "resistance": 8,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 28,
+      "moveSpeed": 0.78
+    },
+    "pik": {
+      "hp": 105,
+      "atk": 27,
+      "armor": 10,
+      "resistance": 5,
+      "atkSpeed": 0.95,
+      "critChance": 0.25,
+      "range": 32,
+      "moveSpeed": 0.88
+    },
+    "archer": {
+      "hp": 75,
+      "atk": 28,
+      "armor": 3,
+      "resistance": 5,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 120,
+      "moveSpeed": 0.82
+    },
+    "bannerbearer": {
+      "hp": 90,
+      "atk": 18,
+      "armor": 8,
+      "resistance": 10,
+      "atkSpeed": 0.85,
+      "critChance": 0.25,
+      "range": 30,
+      "moveSpeed": 0.72
+    },
+    "knight": {
+      "hp": 200,
+      "atk": 39,
+      "armor": 28,
+      "resistance": 15,
+      "atkSpeed": 0.75,
+      "critChance": 0.25,
+      "range": 46,
+      "moveSpeed": 0.9
+    },
+    "treasurer": {
+      "hp": 110,
+      "atk": 16,
+      "armor": 8,
+      "resistance": 12,
+      "atkSpeed": 0.75,
+      "critChance": 0.25,
+      "range": 35,
+      "moveSpeed": 0.65
+    },
+    "cav": {
+      "hp": 155,
+      "atk": 39,
+      "armor": 18,
+      "resistance": 10,
+      "atkSpeed": 0.95,
+      "critChance": 0.25,
+      "range": 30,
+      "moveSpeed": 1.25
+    },
+    "inquisitor": {
+      "hp": 160,
+      "atk": 45,
+      "armor": 16,
+      "resistance": 28,
+      "atkSpeed": 0.85,
+      "critChance": 0.25,
+      "range": 45,
+      "moveSpeed": 0.75
+    },
+    "cat": {
+      "hp": 130,
+      "atk": 67,
+      "armor": 5,
+      "resistance": 8,
+      "atkSpeed": 0.45,
+      "critChance": 0.25,
+      "range": 160,
+      "moveSpeed": 0.45
+    },
+    "priest": {
+      "hp": 140,
+      "atk": 23,
+      "armor": 8,
+      "resistance": 25,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 110,
+      "moveSpeed": 0.65
+    },
+    "paladin": {
+      "hp": 235,
+      "atk": 40,
+      "armor": 28,
+      "resistance": 25,
+      "atkSpeed": 0.8,
+      "critChance": 0.25,
+      "range": 35,
+      "moveSpeed": 0.75
+    },
+    "general": {
+      "hp": 255,
+      "atk": 38,
+      "armor": 22,
+      "resistance": 18,
+      "atkSpeed": 0.8,
+      "critChance": 0.25,
+      "range": 32,
+      "moveSpeed": 0.72
+    },
+    "axe": {
+      "hp": 110,
+      "atk": 30,
+      "armor": 9,
+      "resistance": 5,
+      "atkSpeed": 1,
+      "critChance": 0.4,
+      "range": 25,
+      "moveSpeed": 0.8
+    },
+    "cultist": {
+      "hp": 75,
+      "atk": 25,
+      "armor": 3,
+      "resistance": 15,
+      "atkSpeed": 0.95,
+      "critChance": 0.25,
+      "range": 110,
+      "moveSpeed": 0.7
+    },
+    "reaper": {
+      "hp": 95,
+      "atk": 25,
+      "armor": 8,
+      "resistance": 12,
+      "atkSpeed": 0.95,
+      "critChance": 0.3,
+      "range": 30,
+      "moveSpeed": 0.75
+    },
+    "assassin": {
+      "hp": 85,
+      "atk": 31,
+      "armor": 5,
+      "resistance": 8,
+      "atkSpeed": 1.1,
+      "critChance": 0.4,
+      "range": 28,
+      "moveSpeed": 1.1
+    },
+    "darkspearman": {
+      "hp": 80,
+      "atk": 28,
+      "armor": 5,
+      "resistance": 6,
+      "atkSpeed": 0.9,
+      "critChance": 0.35,
+      "range": 85,
+      "moveSpeed": 0.8
+    },
+    "cross": {
+      "hp": 95,
+      "atk": 44,
+      "armor": 5,
+      "resistance": 8,
+      "atkSpeed": 0.8,
+      "critChance": 0.4,
+      "range": 105,
+      "moveSpeed": 0.72
+    },
+    "alch": {
+      "hp": 110,
+      "atk": 31,
+      "armor": 8,
+      "resistance": 18,
+      "atkSpeed": 0.85,
+      "critChance": 0.25,
+      "range": 85,
+      "moveSpeed": 0.7
+    },
+    "shadowhunter": {
+      "hp": 115,
+      "atk": 42,
+      "armor": 10,
+      "resistance": 12,
+      "atkSpeed": 1.05,
+      "critChance": 0.3,
+      "range": 35,
+      "moveSpeed": 1.05
+    },
+    "shadowmage": {
+      "hp": 105,
+      "atk": 22,
+      "armor": 5,
+      "resistance": 25,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 105,
+      "moveSpeed": 0.7
+    },
+    "mage": {
+      "hp": 90,
+      "atk": 39,
+      "armor": 4,
+      "resistance": 25,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 135,
+      "moveSpeed": 0.72
+    },
+    "golem": {
+      "hp": 300,
+      "atk": 38,
+      "armor": 50,
+      "resistance": 10,
+      "atkSpeed": 0.6,
+      "critChance": 0.25,
+      "range": 30,
+      "moveSpeed": 0.45
+    },
+    "executioner": {
+      "hp": 190,
+      "atk": 48,
+      "armor": 18,
+      "resistance": 12,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 30,
+      "moveSpeed": 0.82
+    },
+    "dog": {
+      "hp": 75,
+      "atk": 24,
+      "armor": 5,
+      "resistance": 5,
+      "atkSpeed": 1.2,
+      "critChance": 0.25,
+      "range": 25,
+      "moveSpeed": 1.15
+    },
+    "snake": {
+      "hp": 70,
+      "atk": 27,
+      "armor": 3,
+      "resistance": 12,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 55,
+      "moveSpeed": 0.85
+    },
+    "slasher": {
+      "hp": 90,
+      "atk": 26,
+      "armor": 6,
+      "resistance": 6,
+      "atkSpeed": 1.15,
+      "critChance": 0.3,
+      "range": 25,
+      "moveSpeed": 1.05
+    },
+    "spider_web": {
+      "hp": 85,
+      "atk": 20,
+      "armor": 5,
+      "resistance": 14,
+      "atkSpeed": 1,
+      "critChance": 0.25,
+      "range": 80,
+      "moveSpeed": 0.75
+    },
+    "goblin": {
+      "hp": 95,
+      "atk": 26,
+      "armor": 8,
+      "resistance": 8,
+      "atkSpeed": 1.05,
+      "critChance": 0.25,
+      "range": 45,
+      "moveSpeed": 0.85
+    },
+    "wolf": {
+      "hp": 125,
+      "atk": 36,
+      "armor": 8,
+      "resistance": 8,
+      "atkSpeed": 1.15,
+      "critChance": 0.25,
+      "range": 25,
+      "moveSpeed": 1.1
+    },
+    "basilisk": {
+      "hp": 95,
+      "atk": 28,
+      "armor": 5,
+      "resistance": 20,
+      "atkSpeed": 0.9,
+      "critChance": 0.25,
+      "range": 95,
+      "moveSpeed": 0.75
+    },
+    "troll": {
+      "hp": 255,
+      "atk": 26,
+      "armor": 18,
+      "resistance": 8,
+      "atkSpeed": 0.75,
+      "critChance": 0.25,
+      "range": 25,
+      "moveSpeed": 0.6
+    },
+    "ogre": {
+      "hp": 235,
+      "atk": 46,
+      "armor": 18,
+      "resistance": 5,
+      "atkSpeed": 0.65,
+      "critChance": 0.25,
+      "range": 28,
+      "moveSpeed": 0.65
+    },
+    "bear": {
+      "hp": 365,
+      "atk": 20,
+      "armor": 24,
+      "resistance": 10,
+      "atkSpeed": 0.65,
+      "critChance": 0.25,
+      "range": 25,
+      "moveSpeed": 0.55
+    },
+    "kraken": {
+      "hp": 190,
+      "atk": 46,
+      "armor": 12,
+      "resistance": 25,
+      "atkSpeed": 0.85,
+      "critChance": 0.25,
+      "range": 135,
+      "moveSpeed": 0.55
+    }
+  }
+}
